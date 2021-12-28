@@ -5,19 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tripathi's engineering college</title>
+    <!-- font awsome -->
+ 
+<script src="https://kit.fontawesome.com/1bf8e9edf6.js" crossorigin="anonymous"></script>
     <style>
         *{
             margin: 0;
             padding: 0;
             font-family: 'PT Sans', sans-serif;
         }
+        #lgo{
+            border-radius: 76px;
+        }
         .header{
             min-height: 100vh;
             width: 100%;
-            background-image:url(1566283133aacad.jpg.jfif);
+            background-image:url(5f499881-7a5f-45ad-90b7-e864717f1958.jfif);
             background-position: center;
             background-size: cover;
             position:relative;
+            background-blend-mode:darken;
         }
         nav{
             display:flex;   
@@ -56,14 +63,182 @@
         .nav-links ul li a:hover::after{
             width:100%
         }
+        .text-box{
+            width: 90%;
+            /* color:seashell; */
+            position:absolute;
+            top: 56%;
+            left: 52%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+
+        }
+        .text-box h1{
+            font-size: 60px;
+            color:white
+        }
+        .text-box p{
+            margin: 10px 0 40px;
+            font-size: 12px;
+            color: white;
+        }
+        .chill{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border:1px solid rgb(253, 248, 248);
+            padding: 12px 34px;
+            font-size: 13px;
+            /* background: transparent; */
+            position:relative;
+            cursor: pointer;
+        }
+        .chill:hover{
+            border: 1px solid rgb(173, 50, 50);
+            background: rgb(189, 49, 49);
+            transition:1s;
+        }
+        .course{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .campus{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .campus-col{
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow:hidden;
+            box-sizing: border-box;
+            display:flex;
+
+        }
+        .campus-col img{
+            width: 100%;
+            display: flex;
+        }
+        .layer{
+            background: transparent;
+            height:100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left:0;
+        }
+        .layer:hover{
+            background: rgba(226,0, 0, 0.7);
+        }
+        .layer h3{
+            width: 100%;
+            font-weight: 500;
+            color: #fff;
+            font-size: 26px;
+            bottom : 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position:absolute;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .layer:hover h3{
+            bottom: 49%;
+            opacity:1;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        p{
+            color:rgb(173, 50, 50);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+        .row{
+            margin-top: 5%;
+            display:flex;
+            justify-content: space-between;
+
+        }
+        .course-col{
+            flex-basis: 31%;
+            background: #fff3ff;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+        }
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0px;
+        }
+        .course-col:hover{
+            box-shadow: 0 0 20px rgb(52, 206, 226);
+        }
+        .facilities{
+            width:80%;
+            margin:auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        
+
+        nav .a{
+            display: none;
+        }
+        @media(max-width: 900px){
+            .text-box h1{
+                font-size: 18px;
+            }
+            .text-box p{
+                font-size: 10px;
+            }
+            .nav-links ul li{       
+                display: block;
+            }
+            .nav-links{
+                position: absolute;
+                background: rgb(173, 50, 50);
+                height: 100vh;
+                width: 200px;
+                top: 0%;
+                right: -200%;
+                text-align: left;
+                z-index: 2;
+                transition: 1s;
+            }
+            nav .fa{
+                display: block;
+                margin: 10px;
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+
+            }
+        }
+        @media(max-width: 700px){
+            .row{
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"><img src="download.png"></a>
-            <div class="nav-links">
+            <a href="index.html"><img src="download.png"id="lgo"></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fas fa-times" onclick="hidemenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT US</a></li>
@@ -72,8 +247,71 @@
                     <li><a href="">CONTACT US</a></li>
                 </ul>
             </div>
+            <i class="fas fa-bars" onclick="showmenu()"></i>
         </nav>
-
+    <div class="text-box">
+        <h2>YOUR FUTURE ,,, OUR HANDS</h2>
+        <p>The college was established in 1998 and offers B.Tech courses in nine disciplines of Engineering namely Computer Science and Engineering, Information Technology, Computer Science, Computer Science & Information Technology, Computer Science and Engineering (Artificial Intelligence & Machine Learning), Computer Science and Engineering (Data Science), Computer Science and Engineering (Hindi), Artificial Intelligence & Machine Learning, Electronics and Communication Engineering, Electrical and Electronics Engineering, Mechanical Engineering and Civil Engineering. B.Tech programs in Computer Science and Engineering, Information Technology, Electronics and Communication Engineering, Electrical and Electronics Engineering and Mechanical Engineering are accredited by NBA. At the post graduate level, the College offers M.Tech in Electronics & Communication Engineering, Computer Science, Electrical and Electronics Engineering and Mechanical Engineering and the Master of Computer Applications course.</p>
+        <a href="" class="chill">VISIT OUR WEBSITE TO KNOW MORE</a>
+    </div>
     </section>
+
+    <section class="course">
+
+        <h3>COURSES WE HAVE</h3>
+        <p>The department provides full support to M.Tech. scholars in terms dissertation guidance, lab facilities and access to international and national journals. Experienced and senior faculty members are assigned for M.Tech courses and dissertation work of the scholars.</p>
+        <div class="row">
+             <div class="course-col">
+                 <h3>Intermediate</h3>
+                 <p>M.Tech scholars have published good quality research papers in peer-reviewed and indexed journals and International Conferences under the guidance of their supervisors in the previous years. The department ensures good quality thesis through regular progress vivas, submission of at least two research papers in peer reviewers and indexed journals and international conferences, plagiarism check using licensed plagiarism check tools, pre-submission viva, and constant monitoring.</p>
+             </div>
+             <div class="course-col">
+                 <h3>degree</h3>
+                 <p>M.Tech scholars have published good quality research papers in peer-reviewed and indexed journals and International Conferences under the guidance of their supervisors in the previous years. The department ensures good quality thesis through regular progress vivas, submission of at least two research papers in peer reviewers and indexed journals and international conferences, plagiarism check using licensed plagiarism check tools, pre-submission viva, and constant monitoring.</p>
+             </div>
+             <div class="course-col">
+                 <h3>Post-graduation</h3>
+                 <p>M.Tech scholars have published good quality research papers in peer-reviewed and indexed journals and International Conferences under the guidance of their supervisors in the previous years. The department ensures good quality thesis through regular progress vivas, submission of at least two research papers in peer reviewers and indexed journals and international conferences, plagiarism check using licensed plagiarism check tools, pre-submission viva, and constant monitoring.</p>
+             </div>
+        </div>
+    </section>
+    <section class="campus">
+        <h1>Global campus</h1>
+        <p>By indulging within itself most famous IT leaders, brilliant scientists and dedicated academicians, CSI has been highly successful in setting the highest benchmark in the field of professional competence with high-quality commitment..</p>
+            <div class="row">
+                <div class="campus-col">
+                    <img src="unnamed.jpg">
+                    <div class="layer">
+                        <h3>Delhi</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="campus-col">
+                    <img src="home-about.jpg">
+                    <div class="layer">
+                        <h3>Noida</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="campus-col">
+                    <img src="b.tech_.jpg">
+                    <div class="layer">
+                        <h3>Gudgaon</h3>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+    <script>
+        var navlinks=document.getElementById("navlinks")
+        function showmenu(){
+            navlinks.style.right='0'
+        }
+        function hidemenu(){
+            navlinks.style.right='-200px'
+        }
+    </script>
 </body>
 </html>
