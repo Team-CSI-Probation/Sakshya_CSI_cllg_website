@@ -20,7 +20,7 @@
         .header{
             min-height: 100vh;
             width: 100%;
-            background-image:url(5f499881-7a5f-45ad-90b7-e864717f1958.jfif);
+            background-image:url(banner.png);
             background-position: center;
             background-size: cover;
             position:relative;
@@ -79,22 +79,23 @@
         }
         .text-box p{
             margin: 10px 0 40px;
-            font-size: 12px;
-            color: white;
+            font-size: 20px;
+            color: rgb(5, 1, 1);
         }
         .chill{
             display: inline-block;
             text-decoration: none;
-            color: white;
+            color: rgb(10, 7, 7);
             border:1px solid rgb(253, 248, 248);
             padding: 12px 34px;
             font-size: 13px;
             /* background: transparent; */
             position:relative;
             cursor: pointer;
+            font-weight: bold;
         }
         .chill:hover{
-            border: 1px solid rgb(173, 50, 50);
+            border: 1px solid rgb(206, 8, 8);
             background: rgb(189, 49, 49);
             transition:1s;
         }
@@ -138,8 +139,8 @@
         .layer h3{
             width: 100%;
             font-weight: 500;
-            color: #fff;
-            font-size: 26px;
+            color: rgb(12, 10, 10);
+            font-size: 40px;
             bottom : 0;
             left: 50%;
             transform: translateX(-50%);
@@ -152,11 +153,12 @@
             opacity:1;
         }
         h1{
-            font-size: 36px;
+            font-size: 31px;
             font-weight: 600;
+            color: #080085;
         }
         p{
-            color:rgb(173, 50, 50);
+            color:rgb(122 53 53);
             font-size: 14px;
             font-weight: 300;
             line-height: 22px;
@@ -189,9 +191,56 @@
             margin:auto;
             text-align: center;
             padding-top: 100px;
+        }.facility-col{
+            flex-basis: 31%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+
+        }
+        .facility-col img{
+            width: 240px;
+            border-radius: 26px;
+            /* padding: 1px;
+            object-fit: cover; */
+        }
+        .facilities-col p{
+            padding:0;
+        }
+        .facility-col h3{
+            margin-top: 16px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .cta{
+            margin: 46px auto;
+            width: 80%;
+            background-image: url("banner2.jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            text-align: center;
+            padding: 100px 17px;
+        }
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+
+        }
+        .footer h4{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
         }
         
-
+        .Icons .fa{
+            color: #0a0101;
+            margin:0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+           
+        }
         nav .a{
             display: none;
         }
@@ -200,7 +249,7 @@
                 font-size: 18px;
             }
             .text-box p{
-                font-size: 10px;
+                font-size: 13px;
             }
             .nav-links ul li{       
                 display: block;
@@ -240,11 +289,11 @@
             <div class="nav-links" id="navlinks">
                 <i class="fas fa-times" onclick="hidemenu()"></i>
                 <ul>
-                    <li><a href="">HOME</a></li>
+                    <li><a href="/index.html">HOME</a></li>
                     <li><a href="">ABOUT US</a></li>
                     <li><a href="">COURSE</a></li>
                     <li><a href="">BLOG</a></li>
-                    <li><a href="">CONTACT US</a></li>
+                    <li><a href="/contact.html">CONTACT US</a></li>
                 </ul>
             </div>
             <i class="fas fa-bars" onclick="showmenu()"></i>
@@ -303,7 +352,47 @@
                 </div>
             </div>
     </section>
-    
+<section class="facilities">
+    <h1>Our facilities</h1>
+    <p>
+        POWER BACK UP,WATER,REPROGRAPHIC,MEDICAL FACILITY,INTERNET FACILITY,CANTEEN,Modern hygienic college canteen,TRANSPORT,BANKING,UTILITY SHOPS
+        </p>
+    <div class="row">
+        <div class="facility-col">
+             <img src="library.png">
+             <h3>PEACEFUL ENVIRONMENT</h3>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga architecto ad laudantium, quaerat in modi rem error sit! Architecto fugit laborum magnam dolorem rem. Natus animi, corrupti autem cumque explicabo dolore veniam ab sint.</p>
+        </div>
+        <div class="facility-col">
+             <img src="basketball.png">
+             <h3>FOUR BASKETBALL COURT</h3>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga architecto ad laudantium, quaerat in modi rem error sit! Architecto fugit laborum magnam dolorem rem. Natus animi, corrupti autem cumque explicabo dolore veniam ab sint.</p>
+        </div>
+        <div class="facility-col">
+             <img src="cafeteria.png">
+             <h3>TASTY AND HEALTHY FOOD</h3>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga architecto ad laudantium, quaerat in modi rem error sit! Architecto fugit laborum magnam dolorem rem. Natus animi, corrupti autem cumque explicabo dolore veniam ab sint.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <h1>Enroll for our various online course<br>anywhere from the world</h1>
+    <a href="" class="chill">Contact us</a>
+</section>
+<section class="footer">
+    <h4>About us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio inventore harum incidunt<br> voluptatem maxime illum aliquid excepturi repellat eaque obcaecati.</p>
+    <div class="Icons">
+        <i class=" fa fa-facebook"></i>
+        <i class=" fa fa-twitter"></i>
+        <i class=" fa fa-instagram"></i>
+        <i class=" fa fa-linkedin"></i>
+        
+    </div>
+    <p>Made by  <i class=" fa fa-heart-o"></i>Sakshya Tripathi</p>
+</section>
     <script>
         var navlinks=document.getElementById("navlinks")
         function showmenu(){
